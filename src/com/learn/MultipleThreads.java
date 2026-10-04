@@ -40,6 +40,7 @@ public class MultipleThreads {
 		ThreadTwo t2= new ThreadTwo();
 		ThreadThree t3= new ThreadThree();
 		
+//		BankAccount b= new BankAccount();
 		
 		t1.setPriority(10);
 		t3.setPriority(9);
