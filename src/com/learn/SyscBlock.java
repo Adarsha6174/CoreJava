@@ -1,5 +1,8 @@
 package com.learn;
 
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
 class Bank{
 	int amt=100;
 	public void withdraw(int val)  {
@@ -25,6 +28,10 @@ public class SyscBlock {
 		
 		Bank b= new Bank();
 		
+		
+	ExecutorService e	= Executors.newFixedThreadPool(5);
+	e.submit(()->System.out.println("ThreadStarted"));
+	e.shutdown();
 		
 		Thread t = new Thread(()->{
 			b.withdraw(700);
